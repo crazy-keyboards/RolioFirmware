@@ -37,9 +37,9 @@
     behaviors {
         // Toggle F-Keys Layer
 
-        td0: tap_dance_0 {
+        td_func_settings: tap_dance_func_settings {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
+            label = "TAP_DANCE_FUNC_SETTINGS";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
             bindings = <&mo FKEYS>, <&tog FKEYS>, <&tog KB_CONFIG>;
@@ -47,9 +47,9 @@
 
         // Toggle Numbers layer
 
-        td1: tap_dance_1 {
+        td_math_numbers: tap_dance_math_numbers {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_1";
+            label = "TAP_DANCE_MATS_NUMBERS";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
             bindings = <&mo NUMBERS>, <&tog MATHS>, <&tog NUMBERS>;
@@ -77,9 +77,9 @@
 
         // Toggle Windows layer
 
-        td4: tap_dance_4 {
+        td_win_mac: tap_dance_win_mac {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_4";
+            label = "TD_WIN_MAC";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LGUI>, <&tog WINDOWS>;
@@ -482,10 +482,10 @@
             label = "Windows";
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
             bindings = <
-&kp GRAVE   &kp Q  &kp W  &kp E     &kp R      &kp T                      &kp Y  &kp U      &kp I      &kp O    &kp P     &kp BSPC
-&kp TAB     &kp A  &kp S  &kp D     &kp F      &kp G                      &kp H  &kp J      &kp K      &kp L    &kp SEMI  &kp FSLH
-&kp LSHIFT  &kp Z  &kp X  &kp C     &kp V      &kp B  &kp F16    &kp F17  &kp N  &kp M      &kp COMMA  &kp DOT  &kp SQT   &kp RSHIFT
-                   &td4   &kp LALT  &kp LCTRL  &td0   &kp SPACE  &kp RET  &td1   &kp RCTRL  &kp RALT   &kp DEL
+&kp GRAVE   &kp Q  &kp W        &kp E     &kp R      &kp T                                  &kp Y             &kp U      &kp I      &kp O    &kp P     &kp BSPC
+&kp TAB     &kp A  &kp S        &kp D     &kp F      &kp G                                  &kp H             &kp J      &kp K      &kp L    &kp SEMI  &kp FSLH
+&kp LSHIFT  &kp Z  &kp X        &kp C     &kp V      &kp B              &kp F16    &kp F17  &kp N             &kp M      &kp COMMA  &kp DOT  &kp SQT   &kp RSHIFT
+                   &td_win_mac  &kp LALT  &kp LCTRL  &td_func_settings  &kp SPACE  &kp RET  &td_math_numbers  &kp RCTRL  &kp RALT   &kp DEL
             >;
         };
 
