@@ -6,10 +6,15 @@ manifest:
       url-base: https://github.com/tklzg
     - name: stephen
       url-base: https://github.com/stephen
+    - name: ssbb
+      url-base: https://github.com/ssbb
   projects:
     - name: zmk
       import: app/west.yml
       remote: zmkfirmware
       revision: main
+    - name: zmk-listeners
+      remote: ssbb
+      revision: v1
   self:
     path: config
