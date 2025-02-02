@@ -511,10 +511,10 @@
             label = "Windows";
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
             bindings = <
-&kp ESC     &kp Q  &kp W        &kp E     &kp R      &td_e_yo                               &kp Y             &kp U        &kp I      &kp O    &kp P     &kp BSPC
-&kp TAB     &kp A  &kp S        &kp D     &kp F      &kp G                                  &kp H             &kp J        &kp K      &kp L    &kp SEMI  &kp FSLH
-&kp LSHIFT  &kp Z  &kp X        &kp C     &kp V      &kp B              &kp F16    &kp F17  &kp N             &td_mzn_tzn  &kp COMMA  &kp DOT  &kp SQT   &kp RSHIFT
-                   &td_win_mac  &kp LALT  &kp LCTRL  &td_func_settings  &kp SPACE  &kp RET  &td_math_numbers  &kp RCTRL    &kp LBKT   &kp DEL
+&kp ESC     &kp Q          &kp W        &kp E     &kp R      &td_e_yo                               &kp Y             &kp U        &kp I      &kp O    &kp P     &kp BSPC
+&kp TAB     &ht_a_gui A A  &kp S        &kp D     &kp F      &kp G                                  &kp H             &kp J        &kp K      &kp L    &kp SEMI  &kp FSLH
+&kp LSHIFT  &kp Z          &kp X        &kp C     &kp V      &kp B              &kp F16    &kp F17  &kp N             &td_mzn_tzn  &kp COMMA  &kp DOT  &kp SQT   &kp RSHIFT
+                           &td_win_mac  &kp LALT  &kp LCTRL  &td_func_settings  &kp SPACE  &kp RET  &td_math_numbers  &kp RCTRL    &kp LBKT   &kp DEL
             >;
         };
 
