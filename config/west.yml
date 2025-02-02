@@ -9,8 +9,7 @@ manifest:
     - name: ssbb
       url-base: https://github.com/ssbb
     - name: joelspadin
-      url-base: https://github.com/joelspadin/zmk-locales
-
+      url-base: https://github.com/joelspadin
   projects:
     - name: zmk
       import: app/west.yml
