@@ -8,6 +8,9 @@ manifest:
       url-base: https://github.com/stephen
     - name: ssbb
       url-base: https://github.com/ssbb
+    - name: joelspadin
+      url-base: https://github.com/joelspadin/zmk-locales
+
   projects:
     - name: zmk
       import: app/west.yml
@@ -16,5 +19,8 @@ manifest:
     - name: zmk-listeners
       remote: ssbb
       revision: v1
+    - name: zmk-locales
+      remote: joelspadin
+      revision: v1.1.0
   self:
     path: config
