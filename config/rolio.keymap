@@ -556,19 +556,19 @@
         };
     };
 
-    layer_listeners {
-        compatible = "zmk,layer-listeners";
-
-        en_layer_toggle {
-            layers = <ENGLISH> ;
-            bindings = <&lng_en &none>;
-        };
-
-        ru_layer_toggle {
-            layers = <RUSSIAN>;
-            bindings = <&lng_ru &none>;
-        };
-    };
+//    layer_listeners {
+//        compatible = "zmk,layer-listeners";
+//
+//        en_layer_toggle {
+//            layers = <ENGLISH> ;
+//            bindings = <&lng_en &none>;
+//        };
+//
+//        ru_layer_toggle {
+//            layers = <RUSSIAN>;
+//            bindings = <&lng_ru &none>;
+//        };
+//    };
 
     keymap {
         compatible = "zmk,keymap";
