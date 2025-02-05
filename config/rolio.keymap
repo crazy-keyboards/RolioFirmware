@@ -610,10 +610,10 @@
             label = "Russian";
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp RU_CYRILLIC_SHORT_I &kp RU_CYRILLIC_TSE &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                  &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE &kp RU_CYRILLIC_SHA &kp RU_CYRILLIC_SHCHA   &kp RU_CYRILLIC_ZE  &trans
+&trans  &trans                  &trans              &trans              &trans              &trans                              &trans              &trans              &trans              &trans                  &trans              &trans
+&trans  &trans                  &trans              &trans              &trans              &trans              &trans  trans   &trans              &trans              &trans              &trans                  &trans              &trans
+                                &trans              &trans              &trans              &trans                              &trans              &trans              &trans              &trans                  &trans              &trans
             >;
         };
 
