@@ -493,6 +493,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
+                <&macro_tap>, <&to ENGLISH>,
                 <&macro_press>,
                 <&kp LCTRL>,
                 <&macro_press>,
@@ -511,6 +512,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
+                <&macro_tap>, <&to RUSSIAN>,
                 <&macro_press>,
                 <&kp LCTRL>,
                 <&macro_press>,
