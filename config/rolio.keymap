@@ -554,7 +554,6 @@
         };
     };
 
-  {
     layer_listeners {
         compatible = "zmk,layer-listeners";
 
