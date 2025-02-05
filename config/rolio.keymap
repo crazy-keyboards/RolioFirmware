@@ -554,6 +554,24 @@
         };
     };
 
+/ {
+    layer_listeners {
+        compatible = "zmk,layer-listeners";
+
+        // Call &haptic_feedback_in on layer enter, and &haptic_feedback_out on layer leave
+        en_layer_toggle {
+            layers = <ENGLISH FKEYS NUMBERS> ;
+            bindings = <&lng_en &none>;
+        };
+
+        // Call &reset_nav on NAV layer leave
+        ru_layer_toggle {
+            layers = <RUSSIAN>;
+            bindings = <&lng_ru &none>;
+        };
+    };
+}
+
     keymap {
         compatible = "zmk,keymap";
 
