@@ -78,7 +78,7 @@
 
         // Toggle Russian layer
 
-        td_en_ru: tap_dance_win_mac {
+        td_en_ru: tap_dance_en_ru {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_EN_RU";
             #binding-cells = <0>;
