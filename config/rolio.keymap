@@ -11,10 +11,10 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <locale/keys_ru.h>
 
-#define MACOS     0
+#define ENGLISH   0
 #define FKEYS     1
 #define NUMBERS   2
-#define WINDOWS   3
+#define RUSSIAN   3
 #define W_FKEYS   4
 #define W_NUMBERS 5
 #define MATHS     6
@@ -25,12 +25,12 @@
         compatible = "zmk,conditional-layers";
 
         win_fkeys {
-            if-layers = <WINDOWS FKEYS>;
+            if-layers = <RUSSIAN FKEYS>;
             then-layer = <W_FKEYS>;
         };
 
         win_numbers {
-            if-layers = <WINDOWS NUMBERS>;
+            if-layers = <RUSSIAN NUMBERS>;
             then-layer = <W_NUMBERS>;
         };
     };
@@ -558,7 +558,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            label = "Windows";
+            label = "QWERTY";
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
             bindings = <
 &kp ESC  &kp Q                &kp W                &kp E                 &kp R                 &td_e_yo                               &kp Y             &kp U                  &kp I                  &kp O                &kp P                   &kp BSPC
@@ -569,7 +569,7 @@
         };
 
         windows_fkeys_layer {
-            label = "F Keys";
+            label = "En F Keys";
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &win_zoom>;
             bindings = <
 &kp ESCAPE  &kp F1  &kp F2   &kp F3   &kp F4   &kp C_PP                               &none     &kp RSHIFT  &kp RCTRL  &kp RALT   &kp RGUI   &none
@@ -580,7 +580,7 @@
         };
 
         windows_numbers_layer {
-            label = "Numbers";
+            label = "En Numbers";
             sensor-bindings = <&inc_dec_kp UP DOWN &win_word_seek>;
             bindings = <
 &kp UNDER  &kp N1    &kp N2          &kp N3           &kp N4    &kp N5                     &kp N6     &kp N7         &kp N8    &kp N9    &kp N0         &trans
@@ -591,10 +591,10 @@
         };
 
         mac_default_layer {
-            label = "Mac OS";
+            label = "Ru ЙЦУКЕН";
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &backspace_word 0 BSPC
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -602,7 +602,7 @@
         };
 
         mac_fkeys_layer {
-            label = "F Keys";
+            label = "Ru F Keys";
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &mac_zoom>;
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                       &trans   &trans  &trans  &trans  &trans  &trans
@@ -613,7 +613,7 @@
         };
 
         mac_numbers_layer {
-            label = "Numbers";
+            label = "Ru Numbers";
             sensor-bindings = <&inc_dec_kp UP DOWN &mac_word_seek>;
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
