@@ -554,7 +554,7 @@
         };
     };
 
-/ {
+  {
     layer_listeners {
         compatible = "zmk,layer-listeners";
 
@@ -570,7 +570,6 @@
             bindings = <&lng_ru &none>;
         };
     };
-}
 
     keymap {
         compatible = "zmk,keymap";
