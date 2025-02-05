@@ -610,10 +610,10 @@
             label = "Russian";
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
             bindings = <
-&trans  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE  &kp RU_CYRILLIC_U  &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                  &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE &kp RU_CYRILLIC_SHA &kp RU_CYRILLIC_SHCHA   &kp RU_CYRILLIC_ZE  &trans
-&trans  &kp RU_CYRILLIC_EF       &trans               &trans             &trans              &trans                              &trans              &trans              &trans              &trans                  &trans              &trans
-&trans  &kp RU_CYRILLIC_YA       &trans               &trans             &trans              &trans              &trans  trans   &trans              &trans              &trans              &trans                  &trans              &trans
-                                 &trans               &trans             &trans              &trans                              &trans              &trans              &trans              &trans                  &trans              &trans
+&trans  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE  &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                  &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE  &trans
+&trans  &kp RU_CYRILLIC_EF       &trans               &trans              &trans              &trans                              &trans              &trans                     &trans               &trans                 &trans              &trans
+&trans  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE  &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &trans  trans   &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &kp RU_CYRILLIC_E   &trans
+                                 &trans               &trans              &trans              &trans                              &trans              &trans                     &trans               &trans                 &trans              &trans
             >;
         };
 
