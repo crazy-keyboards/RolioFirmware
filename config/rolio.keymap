@@ -24,12 +24,12 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        win_fkeys {
+        ru_fkeys {
             if-layers = <RUSSIAN FKEYS>;
             then-layer = <W_FKEYS>;
         };
 
-        win_numbers {
+        ru_numbers {
             if-layers = <RUSSIAN NUMBERS>;
             then-layer = <W_NUMBERS>;
         };
@@ -76,14 +76,14 @@
             bindings = <&kp RSHFT>, <&caps_word>;
         };
 
-        // Toggle Windows layer
+        // Toggle Russian layer
 
-        td_win_mac: tap_dance_win_mac {
+        td_en_ru: tap_dance_win_mac {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_WIN_MAC";
+            label = "TD_EN_RU";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LGUI>, <&tog WINDOWS>;
+            bindings = <&kp LGUI>, <&tog RUSSIAN>;
         };
 
         // Toggle Windows layer
@@ -93,7 +93,7 @@
             label = "TAP_DANCE_5";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp RGUI>, <&tog WINDOWS>;
+            bindings = <&kp RGUI>, <&tog RUSSIAN>;
         };
 
         // Backspace a whole word when holding backspace
@@ -564,11 +564,11 @@
 &kp ESC  &kp Q                &kp W                &kp E                 &kp R                 &td_e_yo                               &kp Y             &kp U                  &kp I                  &kp O                &kp P                   &kp BSPC
 &kp TAB  &ht_hrm_left LGUI A  &ht_hrm_left LALT S  &ht_hrm_left LCTRL D  &ht_hrm_left LSHFT F  &kp G                                  &kp H             &ht_hrm_right RSHFT J  &ht_hrm_right RCTRL K  &ht_hrm_left RALT L  &ht_hrm_left LGUI SEMI  &kp FSLH
 &lng_en  &kp Z                &kp X                &kp C                 &kp V                 &kp B              &kp F16    &kp F17  &kp N             &td_mzn_tzn            &kp COMMA              &kp DOT              &kp SQT                 &lng_ru
-                              &td_win_mac          &kp LALT              &kp DEL               &td_func_settings  &kp SPACE  &kp RET  &td_math_numbers  &kp BSPC               &kp LBKT               &kp DEL
+                              &td_en_ru          &kp LALT              &kp DEL               &td_func_settings  &kp SPACE  &kp RET  &td_math_numbers  &kp BSPC               &kp LBKT               &kp DEL
             >;
         };
 
-        windows_fkeys_layer {
+        en_fkeys_layer {
             label = "En F Keys";
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &win_zoom>;
             bindings = <
@@ -579,7 +579,7 @@
             >;
         };
 
-        windows_numbers_layer {
+        en_numbers_layer {
             label = "En Numbers";
             sensor-bindings = <&inc_dec_kp UP DOWN &win_word_seek>;
             bindings = <
@@ -590,7 +590,7 @@
             >;
         };
 
-        mac_default_layer {
+        ru_default_layer {
             label = "Russian";
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
             bindings = <
@@ -601,7 +601,7 @@
             >;
         };
 
-        mac_fkeys_layer {
+        ru_fkeys_layer {
             label = "Ru F Keys";
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &mac_zoom>;
             bindings = <
@@ -612,7 +612,7 @@
             >;
         };
 
-        mac_numbers_layer {
+        ru_numbers_layer {
             label = "Ru Numbers";
             sensor-bindings = <&inc_dec_kp UP DOWN &mac_word_seek>;
             bindings = <
