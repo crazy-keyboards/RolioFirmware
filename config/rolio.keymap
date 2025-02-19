@@ -13,8 +13,8 @@
 #include "custom-behaviors.dtsi"
 #include "custom-macros.dtsi"
 
-#define ENGLISH   0
-#define RUSSIAN   1
+#define ENG       0
+#define RUS       1
 #define FKEYS     2
 #define NUMBERS   3
 #define MATHS     4
@@ -32,6 +32,14 @@
             #binding-cells = <0>;
             tapping-term-ms = <300>;
             bindings = <&mo NUMBERS>, <&tog MATHS>, <&tog NUMBERS>;
+        };
+
+        td_math_numbers_rus: tap_dance_math_numbers_rus {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_MATS_NUMBERS_RUS";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&m_numbers_rus>, <&tog MATHS>, <&tog NUMBERS>;
         };
 
         // Word Seek
@@ -259,8 +267,8 @@
         };
 
         SWITCH_LANG_AND_MO_LAYER_MACRO(numbers_rus, NUMBERS, ENG_NUM, SECOND_NUM)
-        SWITCH_LANG_AND_TO_LAYER_MACRO(tom_rus, RUSSIAN, SECOND_NUM)
-        SWITCH_LANG_AND_TO_LAYER_MACRO(tom_eng, ENGLISH, ENG_NUM)
+        SWITCH_LANG_AND_TO_LAYER_MACRO(tom_rus, RUS, SECOND_NUM)
+        SWITCH_LANG_AND_TO_LAYER_MACRO(tom_eng, ENG, ENG_NUM)
         SWITCH_LANG_AND_KP_MACRO(kp_number, HASH, SECOND_NUM, ENG_NUM)
 
     };
@@ -300,10 +308,10 @@
             label = "QWERTY";
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
             bindings = <
-&kp ESC     &kp Q                &kp W                &kp E                 &kp R                 &kp T                                  &kp Y             &kp U                  &kp I                  &kp O                &kp P                   &tog KB_CONFIG
-&kp TAB     &ht_hrm_left LGUI A  &ht_hrm_left LALT S  &ht_hrm_left LCTRL D  &ht_hrm_left LSHFT F  &kp G                                  &kp H             &ht_hrm_right RSHFT J  &ht_hrm_right RCTRL K  &ht_hrm_left RALT L  &ht_hrm_left LGUI SEMI  &kp SQT
-&m_tom_eng  &kp Z                &kp X                &kp C                 &kp V                 &kp B              &kp F16    &kp F17  &kp N             &kp M                  &kp COMMA              &kp DOT              &kp FSLH                &m_tom_rus
-                                 &kp DEL              &kp LCTL              &kp LALT              &kp LSHIFT         &kp SPACE  &kp RET  &td_math_numbers  &kp RGUI               &kp LBKT               &kp BSPC
+&kp ESC     &kp Q                &kp W                &kp E                 &kp R                 &kp T                                      &kp Y             &kp U                  &kp I                  &kp O                &kp P                   &tog KB_CONFIG
+&kp TAB     &ht_hrm_left LGUI A  &ht_hrm_left LALT S  &ht_hrm_left LCTRL D  &ht_hrm_left LSHFT F  &kp G                                      &kp H             &ht_hrm_right RSHFT J  &ht_hrm_right RCTRL K  &ht_hrm_left RALT L  &ht_hrm_left LGUI SEMI  &kp SQT
+&m_tom_eng  &kp Z                &kp X                &kp C                 &kp V                 &kp B              &kp F16        &kp F17  &kp N             &kp M                  &kp COMMA              &kp DOT              &kp FSLH                &m_tom_rus
+                                 &kp DEL              &kp LCTL              &kp LALT              &kp LSHIFT         &kp SPACE      &kp RET  &td_math_numbers  &kp RGUI               &kp LBKT               &kp BSPC
             >;
         };
 
@@ -311,10 +319,10 @@
             label = "Russian";
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
             bindings = <
-&trans  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &td_e_yo                            &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &trans
-&trans  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                  &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &kp RU_CYRILLIC_ZHE  &kp FSLH
-&trans  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &trans  &trans  &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_CYRILLIC_E    &trans
-                                 &trans                &trans              &trans              &trans              &trans  &trans                      &trans                     &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN  &trans
+&trans  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &td_e_yo                               &kp RU_CYRILLIC_EN    &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA        &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &trans
+&trans  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                     &kp RU_CYRILLIC_ER    &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL         &kp RU_CYRILLIC_DE         &kp RU_CYRILLIC_ZHE  &kp FSLH
+&trans  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &trans     &trans  &kp RU_CYRILLIC_TE    &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE         &kp RU_CYRILLIC_YU         &kp RU_CYRILLIC_E    &trans
+                                 &trans                &trans              &trans              &trans              &trans     &trans  &td_math_numbers_rus  &kp RU_CYRILLIC_HA         &kp RU_CYRILLIC_HARD_SIGN  &trans
             >;
         };
 
