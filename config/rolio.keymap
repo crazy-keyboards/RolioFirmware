@@ -333,10 +333,10 @@
         };
     };
 
-&sk {
-    release-after-ms = <2000>;
-    lazy;
-};
+    &sk {
+        release-after-ms = <2000>;
+        lazy;
+    };
 
     keymap {
         compatible = "zmk,keymap";
