@@ -314,22 +314,22 @@
 
         combo_sk_win_left {
             bindings = <&sk LGUI>;
-            key-positions = <36 37>;
+            key-positions = <38 39>;
         };
 
         combo_sk_alt_left {
             bindings = <&sk LALT>;
-            key-positions = <37 38>;
+            key-positions = <39 40>;
         };
         
         combo_sk_ctrl_left {
             bindings = <&sk LCTL>;
-            key-positions = <38 39>;
+            key-positions = <40 41>;
         };
         
         combo_sk_shift_left {
             bindings = <&sk LSHFT>;
-            key-positions = <39 40>;
+            key-positions = <41 42>;
         };
     };
 
