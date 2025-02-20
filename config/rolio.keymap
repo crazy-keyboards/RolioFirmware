@@ -20,6 +20,11 @@
 #define MATHS     4
 #define KB_CONFIG 5
 
+&sk {
+    release-after-ms = <2000>;
+    lazy;
+};
+
 / {
 
     behaviors {
@@ -331,11 +336,6 @@
             bindings = <&sk LSHFT>;
             key-positions = <41 42>;
         };
-    };
-
-    &sk {
-        release-after-ms = <2000>;
-        lazy;
     };
 
     keymap {
