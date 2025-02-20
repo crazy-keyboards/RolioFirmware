@@ -311,6 +311,26 @@
             key-positions = <29 28>;
             layers = <ENG RUS>;
         };
+
+        combo_sk_win_left {
+            bindings = <&sk LGUI>;
+            key-positions = <36 37>;
+        };
+
+        combo_sk_alt_left {
+            bindings = <&sk LALT>;
+            key-positions = <37 38>;
+        };
+        
+        combo_sk_ctrl_left {
+            bindings = <&sk LCTL>;
+            key-positions = <38 39>;
+        };
+        
+        combo_sk_shift_left {
+            bindings = <&sk LSHFT>;
+            key-positions = <39 40>;
+        };
     };
 
     keymap {
