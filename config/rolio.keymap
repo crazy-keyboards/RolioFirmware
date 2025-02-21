@@ -108,18 +108,6 @@
             hold-trigger-key-positions = <42 30 29 41 17 5 4 16 28 40 39 27 15 3 2 14 26 38 25 13 1 0 12 24>;
         };
 
-        ht_kp_mo: ht_kp_mo {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT_KP_MO";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
-        };
-
         shft_cpsw: td_shift_capsw {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_LSHIFT_CAPSWORD";
@@ -367,7 +355,7 @@
 &trans  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &td_e_yo                               &kp RU_CYRILLIC_EN    &kp RU_CYRILLIC_GHE             &kp RU_CYRILLIC_SHA        &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &trans
 &trans  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                     &kp RU_CYRILLIC_ER    &kp RU_CYRILLIC_O               &kp RU_CYRILLIC_EL         &kp RU_CYRILLIC_DE         &kp RU_CYRILLIC_ZHE  &kp FSLH
 &trans  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &trans     &trans  &kp RU_CYRILLIC_TE    &kp RU_CYRILLIC_SOFT_SIGN       &kp RU_CYRILLIC_BE         &kp RU_CYRILLIC_YU         &kp RU_CYRILLIC_E    &trans
-                                 &trans                &trans              &trans              &trans              &trans     &trans  &td_math_numbers_rus  &ht_kp_mo RU_CYRILLIC_HA FKEYS  &kp RU_CYRILLIC_HARD_SIGN  &trans
+                                 &trans                &trans              &trans              &trans              &trans     &trans  &td_math_numbers_rus  &lt RU_CYRILLIC_HA FKEYS  &kp RU_CYRILLIC_HARD_SIGN  &trans
             >;
         };
 
