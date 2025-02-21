@@ -398,7 +398,7 @@
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
             bindings = <
 &trans     &trans    &trans  &trans  &trans  &trans                    &kp KP_MULTIPLY  &kp KP_N4     &kp KP_N5     &kp KP_N6    &kp KP_PLUS   &kp KP_NUM
-&trans     &trans    &trans  &trans  &trans  &trans                    &kp N0           &kp KP_1      &kp KP_N2     &kp KP_N3    &kp KP_DOT    &kp C_AL_CALC
+&trans     &trans    &trans  &trans  &trans  &trans                    &kp KP_N0        &kp KP_1      &kp KP_N2     &kp KP_N3    &kp KP_DOT    &kp C_AL_CALC
 &trans     &trans    &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_DIVIDE    &kp KP_N7     &kp KP_N8     &kp KP_N9    &kp KP_MINUS  &kp PRCNT
                      &trans  &trans  &trans  &trans  &trans    &trans  &tog MATHS       &trans        &trans        &trans
             >;
