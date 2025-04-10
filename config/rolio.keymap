@@ -23,6 +23,8 @@
 #define MATHS     4
 #define KB_CONFIG 5
 
+ZMK_COMBO(settings, &tog KB_CONFIG, RT5 RB5)
+
 &sk {
     release-after-ms = <2000>;
     lazy;
