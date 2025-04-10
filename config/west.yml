@@ -27,6 +27,9 @@ manifest:
     - name: zmk-helpers
       remote: crazy-keyboards
       revision: develop
+    - name: zmk-nice-oled
+      remote: crazy-keyboards
+      revision: main
 
   self:
     path: config
