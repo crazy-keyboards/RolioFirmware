@@ -5,10 +5,14 @@
  │ LB5 LB4 LB3 LB2 LB1 LB0 │ RB0 RB1 RB2 RB3 RB4 RB5 │
  ╰───╮ LH4 LH3 LH2 LH1 LH0 │ RH0 RH1 RH2 RH3 RH4 ╭───╯
      ╰─────────────────────┴─────────────────────╯     */
+
+#include "layers.dtsi"
+
 #define COMBO_TERM_FAST 18
 #define COMBO_TERM_SLOW 30
 
 #define COMBO_IDLE_FAST 150
 #define COMBO_IDLE_SLOW 50
 
-ZMK_COMBO(esc, &kp ESC, LT5 LT4)
+ZMK_COMBO(esc, &kp ESC, LT5 LT4, ENG RUS MATHS)
+ZMK_COMBO(settings, &tog KB_CONFIG, RT5 RB5, ENG RUS KB_CONFIG)

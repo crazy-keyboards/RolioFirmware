@@ -15,15 +15,7 @@
 #include "custom-behaviors.dtsi"
 #include "custom-macros.dtsi"
 #include "combos.dtsi"
-
-#define ENG       0
-#define RUS       1
-#define FKEYS     2
-#define NUMBERS   3
-#define MATHS     4
-#define KB_CONFIG 5
-
-ZMK_COMBO(settings, &tog KB_CONFIG, RT5 RB5)
+#include "layers.dtsi"
 
 &sk {
     release-after-ms = <2000>;

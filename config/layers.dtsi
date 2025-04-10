@@ -1,0 +1,6 @@
+#define ENG       0
+#define RUS       1
+#define FKEYS     2
+#define NUMBERS   3
+#define MATHS     4
+#define KB_CONFIG 5
