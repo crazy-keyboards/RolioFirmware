@@ -10,8 +10,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <locale/keys_ru.h>
+#include <zmk-helpers/helper.h>
+#include <zmk-helpers/key-labels/rolio46.h>
 #include "custom-behaviors.dtsi"
 #include "custom-macros.dtsi"
+#include "combos.dtsi"
 
 #define ENG       0
 #define RUS       1
@@ -341,7 +344,7 @@
             label = "QWERTY";
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
             bindings = <
-&kp ESC     &kp Q   &kp W          &kp E       &kp R       &kp T                                 &kp Y             &kp U      &kp I       &kp O       &kp P       &tog KB_CONFIG
+&kp GRAVE   &kp Q   &kp W          &kp E       &kp R       &kp T                                 &kp Y             &kp U      &kp I       &kp O       &kp P       &kp BSPC
 &kp TAB     &kp A   &kp S          &kp D       &kp F       &kp G                                 &kp H             &kp J      &kp K       &kp L       &kp SEMI    &kp SQT
 &m_tom_eng  &kp Z   &kp X          &kp C       &kp V       &kp B       &kp F16         &kp F17   &kp N             &kp M      &kp COMMA   &kp DOT     &kp FSLH    &m_tom_rus
                     &mt LGUI DEL   &kp LALT    &kp LCTL    &shft_cpsw  &kp SPACE       &kp RET   &td_math_numbers  &mo FKEYS  &kp LBKT    &kp BSPC
