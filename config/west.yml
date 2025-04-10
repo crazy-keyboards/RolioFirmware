@@ -10,6 +10,9 @@ manifest:
       url-base: https://github.com/ssbb
     - name: joelspadin
       url-base: https://github.com/joelspadin
+    - name: crazy-keyboards
+      url-base: https://github.com/crazy-keyboards
+
   projects:
     - name: zmk
       import: app/west.yml
@@ -21,5 +24,9 @@ manifest:
     - name: zmk-locales
       remote: joelspadin
       revision: v1.1.0
+    - name: zmk-helpers
+      remote: crazy-keyboards
+      revision: develop
+
   self:
     path: config
