@@ -4,6 +4,7 @@
 #define ENG_NUM N1
 #define SECOND_NUM N2
 #define langswitch(num) LS(LC(num))
+#define langswitch2(num) <&macro_press &kp LSHFT> <&macro_press &kp LCTL> <&macro_tap num> <&macro_release &kp LSHFT> <&macro_release &kp LCTL>
 
 /* Base macro and idea https://github.com/AlaaSaadAbdo/zmk-config/blob/master/config/macros.dtsi 
 #define MACRO(NAME, BINDINGS, WAITMS, TAPMS) \
@@ -29,11 +30,11 @@ MACRO(nav, &macro_tap &kp LC(LS(N2)) &mo LWR &macro_pause_for_release &macro_rel
       wait-ms = <SWITCH_COMBO_WAIT_MS>; \
       tap-ms = <SWITCH_COMBO_TAP_MS>; \
       bindings \
-        = <&macro_tap &kp langswitch(NUM)> \
+        = langswitch2(NUM) \
         , <&macro_press &mo LAYER> \
         , <&macro_pause_for_release> \
         , <&macro_tap_time SWITCH_COMBO_TAP_MS> \
-        , <&macro_tap &kp langswitch(RETURN_NUM)> \
+        , langswitch2(RETURN_NUM) \
         , <&macro_release &mo LAYER> \
         ; \
   };
@@ -47,10 +48,10 @@ MACRO(nav, &macro_tap &kp LC(LS(N2)) &mo LWR &macro_pause_for_release &macro_rel
       wait-ms = <SWITCH_COMBO_WAIT_MS>; \
       tap-ms = <SWITCH_COMBO_TAP_MS>; \
       bindings \
-        = <&macro_tap &kp langswitch(NUM)> \
+        = langswitch2(NUM) \
         , <&macro_tap &kp KEY> \
         , <&macro_tap_time SWITCH_COMBO_TAP_MS> \
-        , <&macro_tap &kp langswitch(RETURN_NUM)> \
+        , langswitch2(RETURN_NUM) \
         ; \
   };
 
@@ -63,7 +64,7 @@ MACRO(nav, &macro_tap &kp LC(LS(N2)) &mo LWR &macro_pause_for_release &macro_rel
       wait-ms = <SWITCH_COMBO_WAIT_MS>; \
       tap-ms = <SWITCH_COMBO_TAP_MS>; \
       bindings \
-        = <&macro_tap &kp langswitch(NUM)> \
+        = langswitch2(NUM) \
         , <&macro_tap &to LAYER> \
         ; \
   };
