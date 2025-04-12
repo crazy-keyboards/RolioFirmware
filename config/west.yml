@@ -18,8 +18,8 @@ manifest:
       remote: ssbb
       revision: v1
     - name: zmk-locales
-      remote: joelspadin
-      revision: v1.1.0
+      remote: crazy-keyboards
+      revision: develop
     - name: zmk-helpers
       remote: crazy-keyboards
       revision: develop
