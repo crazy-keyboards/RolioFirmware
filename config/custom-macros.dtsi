@@ -4,7 +4,7 @@
 #define ENG_NUM N1
 #define SECOND_NUM N2
 #define langswitch(num) LS(LC(num))
-#define langswitch2(num) <&macro_press &kp LSHFT> <&macro_press &kp LCTL> <&macro_tap num> <&macro_release &kp LSHFT> <&macro_release &kp LCTL>
+#define langswitch2(num) <&macro_press &kp LSHFT>, <&macro_press &kp LCTL>, <&macro_tap num>, <&macro_release &kp LSHFT>, <&macro_release &kp LCTL>
 
 /* Base macro and idea https://github.com/AlaaSaadAbdo/zmk-config/blob/master/config/macros.dtsi 
 #define MACRO(NAME, BINDINGS, WAITMS, TAPMS) \
