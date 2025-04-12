@@ -17,6 +17,9 @@
 #include "combos.dtsi"
 #include "layers.dtsi"
 
+#define NONE &none
+#define TRNS &trans
+
 &sk {
     release-after-ms = <2000>;
     lazy;
@@ -301,10 +304,10 @@
             label = "Russian";
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
             bindings = <
-&trans  &kp RU_J   &kp RU_TS  &kp RU_U   &kp RU_K   &td_e_yo                      &kp RU_N              &kp RU_G    &kp RU_SH   &kp RU_SC  &kp RU_Z   &trans
-&trans  &kp RU_F   &kp RU_Y   &kp RU_V   &kp RU_A   &kp RU_P                      &kp RU_R              &kp RU_O    &kp RU_L    &kp RU_D   &kp RU_ZH  &kp FSLH
-&trans  &kp RU_YA  &kp RU_CH  &kp RU_S   &kp RU_M   &kp RU_I   &trans     &trans  &kp RU_T              &kp RU_SS   &kp RU_B    &kp RU_YU  &kp RU_E   &trans
-                   &trans     &trans     &trans     &trans     &trans     &trans  &td_math_numbers_rus  &kp RU_H    &kp RU_HS   &trans
+TRNS  &kp RU_J   &kp RU_TS  &kp RU_U   &kp RU_K   &td_e_yo                  &kp RU_N              &kp RU_G    &kp RU_SH   &kp RU_SC  &kp RU_Z   TRNS
+TRNS  &kp RU_F   &kp RU_Y   &kp RU_V   &kp RU_A   &kp RU_P                  &kp RU_R              &kp RU_O    &kp RU_L    &kp RU_D   &kp RU_ZH  &kp FSLH
+TRNS  &kp RU_YA  &kp RU_CH  &kp RU_S   &kp RU_M   &kp RU_I   TRNS     TRNS  &kp RU_T              &kp RU_SS   &kp RU_B    &kp RU_YU  &kp RU_E   TRNS
+                 TRNS       TRNS       TRNS       TRNS       TRNS     TRNS  &td_math_numbers_rus  &kp RU_H    &kp RU_HS   TRNS
             >;
         };
 
@@ -312,10 +315,10 @@
             label = "F Keys";
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &zoom>;
             bindings = <
-&kp ESCAPE  &kp F1  &kp F2   &kp F3   &kp F4   &kp C_PP                               &none     &kp RSHIFT  &kp RCTRL  &kp RALT   &kp RGUI   &none
-&bt BT_PRV  &kp F5  &kp F6   &kp F7   &kp F8   &kp C_NEXT                             &kp HOME  &kp UP      &kp END    &kp PSCRN  &kp PG_UP  &none
-&bt BT_NXT  &kp F9  &kp F10  &kp F11  &kp F12  &kp C_PREV  &kp C_MUTE  &reset_zoom    &kp LEFT  &kp DOWN    &kp RIGHT  &scrcr     &kp PG_DN  &none
-                    &trans   &trans   &trans   &trans      &trans      &trans         &trans    &trans      &trans     &trans
+&kp ESCAPE  &kp F1  &kp F2   &kp F3   &kp F4   &kp C_PP                               NONE      &kp RSHIFT  &kp RCTRL  &kp RALT   &kp RGUI   NONE
+&bt BT_PRV  &kp F5  &kp F6   &kp F7   &kp F8   &kp C_NEXT                             &kp HOME  &kp UP      &kp END    &kp PSCRN  &kp PG_UP  NONE
+&bt BT_NXT  &kp F9  &kp F10  &kp F11  &kp F12  &kp C_PREV  &kp C_MUTE  &reset_zoom    &kp LEFT  &kp DOWN    &kp RIGHT  &scrcr     &kp PG_DN  NONE
+                    TRNS     TRNS     TRNS     TRNS        TRNS        TRNS           TRNS      TRNS        TRNS       TRNS
             >;
         };
 
@@ -323,10 +326,10 @@
             label = "Numbers";
             sensor-bindings = <&inc_dec_kp UP DOWN &word_seek>;
             bindings = <
-&kp UNDER  &kp N1    &kp N2          &kp N3           &kp N4    &kp N5                     &kp N6     &kp N7         &kp N8    &kp N9    &kp N0         &trans
-&trans     &kp EXCL  &kp AT          &kp HASH         &kp DLLR  &kp PRCNT                  &kp CARET  &kp AMPERSAND  &kp STAR  &kp LPAR  &kp RPAR       &kp BACKSLASH
-&trans     &pal      &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp PIPE  &kp EQUAL  &trans  &trans  &kp MINUS  &kp PLUS       &kp LBKT  &kp RBKT  &kp FSLH       &kp DOT
-                     &trans          &trans           &trans    &trans     &trans  &trans  &trans     &trans         &trans    &trans
+&kp UNDER  &kp N1    &kp N2          &kp N3           &kp N4    &kp N5                 &kp N6     &kp N7         &kp N8    &kp N9    &kp N0         TRNS
+TRNS       &kp EXCL  &kp AT          &kp HASH         &kp DLLR  &kp PRCNT              &kp CARET  &kp AMPERSAND  &kp STAR  &kp LPAR  &kp RPAR       &kp BACKSLASH
+TRNS       &pal      &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp PIPE  &kp EQUAL  TRNS  TRNS  &kp MINUS  &kp PLUS       &kp LBKT  &kp RBKT  &kp FSLH       &kp DOT
+                     TRNS            TRNS             TRNS      TRNS       TRNS  TRNS  TRNS       TRNS           TRNS      TRNS
             >;
         };
 
@@ -334,32 +337,21 @@
             label = "Maths";
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
             bindings = <
-&trans     &trans    &trans  &trans  &trans  &trans                    &kp KP_MULTIPLY  &kp KP_N4     &kp KP_N5     &kp KP_N6    &kp KP_PLUS   &kp KP_NUM
-&trans     &trans    &trans  &trans  &trans  &trans                    &kp KP_N0        &kp KP_N1     &kp KP_N2     &kp KP_N3    &kp KP_DOT    &kp C_AL_CALC
-&trans     &trans    &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_DIVIDE    &kp KP_N7     &kp KP_N8     &kp KP_N9    &kp KP_MINUS  &kp PRCNT
-                     &trans  &trans  &trans  &trans  &trans    &trans  &tog MATHS       &trans        &trans        &trans
+TRNS     TRNS    TRNS  TRNS  TRNS  TRNS                    &kp KP_MULTIPLY  &kp KP_N4     &kp KP_N5     &kp KP_N6    &kp KP_PLUS   &kp KP_NUM
+TRNS     TRNS    TRNS  TRNS  TRNS  TRNS                    &kp KP_N0        &kp KP_N1     &kp KP_N2     &kp KP_N3    &kp KP_DOT    &kp C_AL_CALC
+TRNS     TRNS    TRNS  TRNS  TRNS  TRNS  TRNS    TRNS  &kp KP_DIVIDE        &kp KP_N7     &kp KP_N8     &kp KP_N9    &kp KP_MINUS  &kp PRCNT
+                 TRNS  TRNS  TRNS  TRNS  TRNS    TRNS  &tog MATHS           TRNS          TRNS          TRNS
             >;
         };
-
-//        maths_layer {
-//            label = "Maths";
-//            sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
-//            bindings = <
-//&kp UNDER  &kp N1    &kp N2  &kp N3  &kp N4  &kp N5                     &kp N6      &kp N7         &kp N8    &kp N9    &kp N0    &trans
-//&trans     &kp EXCL  &trans  &trans  &trans  &kp PRCNT                  &kp CARET   &kp AMPERSAND  &kp STAR  &kp LPAR  &kp RPAR  &kp FSLH
-//&trans     &pal      &trans  &trans  &trans  &kp EQUAL  &trans  &trans  &kp MINUS   &kp PLUS       &trans    &trans    &trans    &kp DOT
-//                     &trans  &trans  &trans  &trans     &trans  &trans  &tog MATHS  &trans         &trans    &trans
-//            >;
-//        };
 
         settings_layer {
             label = "Settings";
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
             bindings = <
-&out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &bt BT_PRV    &bt BT_NXT    &trans        &trans        &trans                          &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &trans        &bt BT_CLR    &bl BL_DEC    &bl BL_TOG    &bl BL_INC      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                            &trans        &trans        &trans        &tog KB_CONFIG  &trans  &trans  &trans  &trans  &trans  &trans
+&out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                TRNS  TRNS  TRNS  TRNS  TRNS  TRNS
+TRNS          &bt BT_PRV    &bt BT_NXT    TRNS          TRNS          TRNS                        TRNS  TRNS  TRNS  TRNS  TRNS  TRNS
+TRNS          TRNS          &bt BT_CLR    &bl BL_DEC    &bl BL_TOG    &bl BL_INC      TRNS  TRNS  TRNS  TRNS  TRNS  TRNS  TRNS  TRNS
+                            TRNS          TRNS          TRNS          &tog KB_CONFIG  TRNS  TRNS  TRNS  TRNS  TRNS  TRNS
             >;
         };
     };
