@@ -363,6 +363,5 @@ ZMK_LAYER(settings,
         SWITCH_LANG_AND_KP_MACRO(kp_number, HASH, SECOND_NUM, ENG_NUM)
 
     };
-
-    keymap 
+ 
 };
