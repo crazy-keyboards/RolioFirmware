@@ -21,8 +21,8 @@ ZMK_COMBO(esc,
 
 ZMK_COMBO(settings,
     &tog KB_CONFIG,
-    RT5 RM5,
-     ENG RUS KB_CONFIG)
+    LT5 LT0,
+    ENG RUS KB_CONFIG)
 
 ZMK_COMBO(ZX_ctrlC,
     &kp LC(Z),
