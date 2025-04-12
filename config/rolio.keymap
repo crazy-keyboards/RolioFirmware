@@ -283,54 +283,6 @@
 
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        combo_ZX_ctrlC {
-            bindings = <&kp LC(Z)>;
-            key-positions = <25 26>;
-            layers = <ENG RUS>;
-        };
-
-        combo_XC_ctrlX {
-            bindings = <&kp LC(X)>;
-            key-positions = <26 27>;
-            layers = <ENG RUS>;
-        };
-
-        combo_CV_ctrlC {
-            bindings = <&kp LC(C)>;
-            key-positions = <27 28>;
-            layers = <ENG RUS>;
-        };
-
-        combo_VB_ctrlV {
-            bindings = <&kp LC(V)>;
-            key-positions = <29 28>;
-            layers = <ENG RUS>;
-        };
-
-        combo_sk_win_left {
-            bindings = <&sk LGUI>;
-            key-positions = <38 39>;
-        };
-
-        combo_sk_alt_left {
-            bindings = <&sk LALT>;
-            key-positions = <39 40>;
-        };
-        
-        combo_sk_ctrl_left {
-            bindings = <&sk LCTL>;
-            key-positions = <40 41>;
-        };
-        
-        combo_sk_shift_left {
-            bindings = <&sk LSHFT>;
-            key-positions = <41 42>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
