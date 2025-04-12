@@ -31,7 +31,7 @@
        
         // Toggle Numbers layer
 
-        td_math_numbers: tap_dance_math_numbers {
+        td_mnum: tap_dance_math_numbers {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_MATS_NUMBERS";
             #binding-cells = <0>;
@@ -39,7 +39,7 @@
             bindings = <&mo NUMBERS>, <&tog MATHS>, <&tog NUMBERS>;
         };
 
-        td_math_numbers_rus: tap_dance_math_numbers_rus {
+        td_mnum_rus: tap_dance_math_numbers_rus {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_MATS_NUMBERS_RUS";
             #binding-cells = <0>;
@@ -293,10 +293,15 @@
             label = "QWERTY";
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
             bindings = <
-&kp GRAVE   &kp Q   &kp W          &kp E       &kp R       &kp T                                 &kp Y             &kp U      &kp I       &kp O       &kp P       &kp BSPC
-&kp TAB     &kp A   &kp S          &kp D       &kp F       &kp G                                 &kp H             &kp J      &kp K       &kp L       &kp SEMI    &kp SQT
-&m_tom_eng  &kp Z   &kp X          &kp C       &kp V       &kp B       &kp F16         &kp F17   &kp N             &kp M      &kp COMMA   &kp DOT     &kp FSLH    &m_tom_rus
-                    &mt LGUI DEL   &kp LALT    &kp LCTL    &shft_cpsw  &kp SPACE       &kp RET   &td_math_numbers  &mo FKEYS  &kp LBKT    &kp BSPC
+//╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮                              ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
+    &kp GRAVE      &kp Q          &kp W          &kp E          &kp R          &kp T                                         &kp Y          &kp U          &kp I          &kp O          &kp P          &kp BSPC
+//├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤                              ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+    &kp TAB        &kp A          &kp S          &kp D          &kp F          &kp G                                         &kp H          &kp J          &kp K          &kp L          &kp SEMI       &kp SQT
+//├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────╮╭──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+    &m_tom_eng     &kp Z          &kp X          &kp C          &kp V          &kp B          &kp F16         &kp F17        &kp N          &kp M          &kp COMMA      &kp DOT        &kp FSLH       &m_tom_rus
+//╰──────────────┼──────────────┴──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯
+                                  &mt LGUI DEL   &kp LALT       &kp LCTL       &shft_cpsw     &kp SPACE       &kp RET        &td_mnum       &mo FKEYS      &kp LBKT       &kp BSPC
+                                ╰──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯╰──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯
             >;
         };
 
@@ -304,10 +309,15 @@
             label = "Russian";
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
             bindings = <
-TRNS  &kp RU_J   &kp RU_TS  &kp RU_U   &kp RU_K   &td_e_yo                  &kp RU_N              &kp RU_G    &kp RU_SH   &kp RU_SC  &kp RU_Z   TRNS
-TRNS  &kp RU_F   &kp RU_Y   &kp RU_V   &kp RU_A   &kp RU_P                  &kp RU_R              &kp RU_O    &kp RU_L    &kp RU_D   &kp RU_ZH  &kp FSLH
-TRNS  &kp RU_YA  &kp RU_CH  &kp RU_S   &kp RU_M   &kp RU_I   TRNS     TRNS  &kp RU_T              &kp RU_SS   &kp RU_B    &kp RU_YU  &kp RU_E   TRNS
-                 TRNS       TRNS       TRNS       TRNS       TRNS     TRNS  &td_math_numbers_rus  &kp RU_H    &kp RU_HS   TRNS
+//╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮                              ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
+    TRNS           &kp RU_J       &kp RU_TS      &kp RU_U       &kp RU_K       &td_e_yo                                      &kp RU_N       &kp RU_G       &kp RU_SH      &kp RU_SC      &kp RU_Z       TRNS
+//├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤                              ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+    TRNS           &kp RU_F       &kp RU_Y       &kp RU_V       &kp RU_A       &kp RU_P                                      &kp RU_R       &kp RU_O       &kp RU_L       &kp RU_D       &kp RU_ZH      &kp FSLH
+//├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────╮╭──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+    TRNS           &kp RU_YA      &kp RU_CH      &kp RU_S       &kp RU_M       &kp RU_I       TRNS            TRNS           &kp RU_T       &kp RU_SS      &kp RU_B       &kp RU_YU      &kp RU_E       TRNS
+//╰──────────────┼──────────────┴──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯
+                                  TRNS           TRNS           TRNS           TRNS           TRNS            TRNS           &td_mnum_rus   &kp RU_H       &kp RU_HS     TRNS
+                                ╰──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯╰──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯
             >;
         };
 
@@ -315,10 +325,15 @@ TRNS  &kp RU_YA  &kp RU_CH  &kp RU_S   &kp RU_M   &kp RU_I   TRNS     TRNS  &kp 
             label = "F Keys";
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &zoom>;
             bindings = <
-&kp ESCAPE  &kp F1  &kp F2   &kp F3   &kp F4   &kp C_PP                               NONE      &kp RSHIFT  &kp RCTRL  &kp RALT   &kp RGUI   NONE
-&bt BT_PRV  &kp F5  &kp F6   &kp F7   &kp F8   &kp C_NEXT                             &kp HOME  &kp UP      &kp END    &kp PSCRN  &kp PG_UP  NONE
-&bt BT_NXT  &kp F9  &kp F10  &kp F11  &kp F12  &kp C_PREV  &kp C_MUTE  &reset_zoom    &kp LEFT  &kp DOWN    &kp RIGHT  &scrcr     &kp PG_DN  NONE
-                    TRNS     TRNS     TRNS     TRNS        TRNS        TRNS           TRNS      TRNS        TRNS       TRNS
+//╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮                              ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
+    &kp ESCAPE     &kp F1         &kp F2         &kp F3         &kp F4         &kp C_PP                                      NONE           &kp RSHIFT     &kp RCTRL      &kp RALT       &kp RGUI       NONE
+//├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤                              ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+    &bt BT_PRV     &kp F5         &kp F6         &kp F7         &kp F8         &kp C_NEXT                                    &kp HOME       &kp UP         &kp END        &kp PSCRN      &kp PG_UP      NONE
+//├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────╮╭──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+    &bt BT_NXT     &kp F9         &kp F10        &kp F11        &kp F12        &kp C_PREV     &kp C_MUTE      &reset_zoom    &kp LEFT       &kp DOWN       &kp RIGHT      &scrcr         &kp PG_DN      NONE
+//╰──────────────┼──────────────┴──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯
+                                  TRNS           TRNS           TRNS           TRNS           TRNS            TRNS           TRNS           TRNS           TRNS           TRNS
+                                ╰──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯╰──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯
             >;
         };
 
@@ -326,10 +341,15 @@ TRNS  &kp RU_YA  &kp RU_CH  &kp RU_S   &kp RU_M   &kp RU_I   TRNS     TRNS  &kp 
             label = "Numbers";
             sensor-bindings = <&inc_dec_kp UP DOWN &word_seek>;
             bindings = <
-&kp UNDER  &kp N1    &kp N2          &kp N3           &kp N4    &kp N5                 &kp N6     &kp N7         &kp N8    &kp N9    &kp N0         TRNS
-TRNS       &kp EXCL  &kp AT          &kp HASH         &kp DLLR  &kp PRCNT              &kp CARET  &kp AMPERSAND  &kp STAR  &kp LPAR  &kp RPAR       &kp BACKSLASH
-TRNS       &pal      &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp PIPE  &kp EQUAL  TRNS  TRNS  &kp MINUS  &kp PLUS       &kp LBKT  &kp RBKT  &kp FSLH       &kp DOT
-                     TRNS            TRNS             TRNS      TRNS       TRNS  TRNS  TRNS       TRNS           TRNS      TRNS
+//╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮                              ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
+    &kp UNDER      &kp N1         &kp N2         &kp N3         &kp N4         &kp N5                                        &kp N6         &kp N7         &kp N8         &kp N9         &kp N0         TRNS
+//├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤                              ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+    TRNS           &kp EXCL       &kp AT         &kp HASH       &kp DLLR       &kp PRCNT                                     &kp CARET      &kp AMPS       &kp STAR       &kp LPAR       &kp RPAR       &kp BSLH
+//├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────╮╭──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+    TRNS           &pal           &kp LBRC       &kp RBRC       &kp PIPE       &kp EQUAL      TRNS            TRNS           &kp MINUS      &kp PLUS       &kp LBKT       &kp RBKT       &kp FSLH       &kp DOT
+//╰──────────────┼──────────────┴──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯
+                                  TRNS           TRNS           TRNS           TRNS           TRNS            TRNS           TRNS           TRNS           TRNS           TRNS
+                                ╰──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯╰──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯
             >;
         };
 
@@ -337,10 +357,15 @@ TRNS       &pal      &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp PIPE  &kp EQUAL  TRNS 
             label = "Maths";
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
             bindings = <
-TRNS     TRNS    TRNS  TRNS  TRNS  TRNS                    &kp KP_MULTIPLY  &kp KP_N4     &kp KP_N5     &kp KP_N6    &kp KP_PLUS   &kp KP_NUM
-TRNS     TRNS    TRNS  TRNS  TRNS  TRNS                    &kp KP_N0        &kp KP_N1     &kp KP_N2     &kp KP_N3    &kp KP_DOT    &kp C_AL_CALC
-TRNS     TRNS    TRNS  TRNS  TRNS  TRNS  TRNS    TRNS  &kp KP_DIVIDE        &kp KP_N7     &kp KP_N8     &kp KP_N9    &kp KP_MINUS  &kp PRCNT
-                 TRNS  TRNS  TRNS  TRNS  TRNS    TRNS  &tog MATHS           TRNS          TRNS          TRNS
+//╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮                              ╭───────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
+    TRNS           TRNS           TRNS           TRNS           TRNS          TRNS                                           &kp KP_MULTIPLY &kp KP_N4      &kp KP_N5      &kp KP_N6      &kp KP_PLUS    &kp KP_NUM
+//├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤                              ├───────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+    TRNS           TRNS           TRNS           TRNS           TRNS           TRNS                                          &kp KP_N0       &kp KP_N1      &kp KP_N2      &kp KP_N3      &kp KP_DOT     &kp C_AL_CALC
+//├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────╮╭──────────────┼───────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+    TRNS           TRNS           TRNS           TRNS           TRNS           TRNS           TRNS           TRNS            &kp KP_DIVIDE   &kp KP_N7      &kp KP_N8      &kp KP_N9      &kp KP_MINUS   &kp PRCNT
+//╰──────────────┼──────────────┴──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼───────────────┼──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯
+                                  TRNS           TRNS           TRNS           TRNS           TRNS            TRNS           &tog MATHS      TRNS           TRNS            TRNS
+                                ╰──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯╰──────────────┴───────────────┴──────────────┴──────────────┴──────────────╯
             >;
         };
 
@@ -348,10 +373,15 @@ TRNS     TRNS    TRNS  TRNS  TRNS  TRNS  TRNS    TRNS  &kp KP_DIVIDE        &kp 
             label = "Settings";
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
             bindings = <
-&out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                TRNS  TRNS  TRNS  TRNS  TRNS  TRNS
-TRNS          &bt BT_PRV    &bt BT_NXT    TRNS          TRNS          TRNS                        TRNS  TRNS  TRNS  TRNS  TRNS  TRNS
-TRNS          TRNS          &bt BT_CLR    &bl BL_DEC    &bl BL_TOG    &bl BL_INC      TRNS  TRNS  TRNS  TRNS  TRNS  TRNS  TRNS  TRNS
-                            TRNS          TRNS          TRNS          &tog KB_CONFIG  TRNS  TRNS  TRNS  TRNS  TRNS  TRNS
+//╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮                               ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
+    &out OUT_TOG   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4                                   TRNS           TRNS           TRNS           TRNS           TRNS           TRNS
+//├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤                               ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+    TRNS           &bt BT_PRV     &bt BT_NXT     TRNS           TRNS           TRNS                                           TRNS           TRNS           TRNS           TRNS           TRNS           TRNS
+//├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────╮ ╭──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+    TRNS           TRNS           &bt BT_CLR     &bl BL_DEC     &bl BL_TOG     &bl BL_INC     TRNS             TRNS           TRNS           TRNS           TRNS           TRNS           TRNS           TRNS
+//╰──────────────┼──────────────┴──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯
+                                  TRNS           TRNS           TRNS           &tog KB_CONFIG TRNS             TRNS           TRNS           TRNS           TRNS           TRNS
+                                ╰──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯ ╰──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯
             >;
         };
     };
