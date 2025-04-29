@@ -29,14 +29,11 @@ MACRO(nav, &macro_tap &kp LC(LS(N2)) &mo LWR &macro_pause_for_release &macro_rel
       wait-ms = <SWITCH_COMBO_WAIT_MS>; \
       tap-ms = <SWITCH_COMBO_TAP_MS>; \
       bindings \
-        = langswitch(NUM) \
-        \
+        = <&macro_tap &kp langswitch(NUM)> \
         , <&macro_press &mo LAYER> \
         , <&macro_pause_for_release> \
         , <&macro_tap_time SWITCH_COMBO_TAP_MS> \
-        \
-        , langswitch(RETURN_NUM) \
-        \
+        , <&macro_tap &kp langswitch(RETURN_NUM)> \
         , <&macro_release &mo LAYER> \
         ; \
   };
@@ -50,12 +47,10 @@ MACRO(nav, &macro_tap &kp LC(LS(N2)) &mo LWR &macro_pause_for_release &macro_rel
       wait-ms = <SWITCH_COMBO_WAIT_MS>; \
       tap-ms = <SWITCH_COMBO_TAP_MS>; \
       bindings \
-        = langswitch(NUM) \
-        \
+        = <&macro_tap &kp langswitch(NUM)> \
         , <&macro_tap &kp KEY> \
         , <&macro_tap_time SWITCH_COMBO_TAP_MS> \
-        \
-        , langswitch(RETURN_NUM) \
+        , <&macro_tap &kp langswitch(RETURN_NUM)> \
         ; \
   };
 
@@ -68,8 +63,7 @@ MACRO(nav, &macro_tap &kp LC(LS(N2)) &mo LWR &macro_pause_for_release &macro_rel
       wait-ms = <SWITCH_COMBO_WAIT_MS>; \
       tap-ms = <SWITCH_COMBO_TAP_MS>; \
       bindings \
-        = langswitch(NUM) \
-        \
+        = <&macro_tap &kp langswitch(NUM)> \
         , <&macro_tap &to LAYER> \
         ; \
   };
