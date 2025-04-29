@@ -198,36 +198,14 @@ ZMK_LAYER(settings,
         ruen_one_key: ruen_one_key {
             compatible = "zmk,behavior-ruen-one-key";
             #binding-cells = <2>;
-            to_en = <&ctrl_shift_n1>;
-            to_ru = <&ctrl_shift_n2>;
+            to_en = <0xE0E11E>;
+            to_ru = <0xE0E11F>;
         };
 
         HOLD_COMBO_BEHAVIOR(htnumbers_rus, <&m_numbers_rus>) // macro_numbers_rus on hold and kp on tap
     };
 
     macros {
-
-        ctrl_shift_n1: ctrl_shift_n1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;  // небольшая задержка для надёжности
-            tap-ms = <10>;
-            bindings = 
-                <&macro_press &kp LCTRL &kp LSHIFT>, 
-                <&macro_tap &kp N1>, 
-                <&macro_release &kp LCTRL &kp LSHIFT>;
-        };
-
-        ctrl_shift_n2: ctrl_shift_n2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;  // небольшая задержка для надёжности
-            tap-ms = <10>;
-            bindings = 
-                <&macro_press &kp LCTRL &kp LSHIFT>, 
-                <&macro_tap &kp N2>, 
-                <&macro_release &kp LCTRL &kp LSHIFT>;
-        };
 
         unindent: unindent {
             label = "UNINDENT";
