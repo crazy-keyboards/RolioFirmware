@@ -20,6 +20,8 @@
 
 #define NONE &none
 #define TRNS &trans
+#define ONEKEY &ruen_one_key
+#define RUENKEY &ruen_key
 
 &sk {
     release-after-ms = <2000>;
@@ -34,7 +36,7 @@ ZMK_LAYER(qwerty,
 //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤                              ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
     &kp TAB        &kp A          &kp S          &kp D          &kp F          &kp G                                         &kp H          &kp J          &kp K          &kp L          &kp SEMI       &kp SQT
 //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────╮╭──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-    &rulayer       &kp Z          &kp X          &kp C          &kp V          &kp B          &kp F16         &kp F17        &kp N          &kp M          &kp COMMA      &kp DOT        &kp FSLH       &enlayer
+    &enlayer       &kp Z          &kp X          &kp C          &kp V          &kp B          &kp F16         &kp F17        &kp N          &kp M          &kp COMMA      &kp DOT        &kp FSLH       &rulayer
 //╰──────────────┼──────────────┴──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯
                                   &mt LGUI DEL   &kp LALT       &kp LCTL       &shft_cpsw     &kp SPACE       &kp RET        &td_mnum       &mo FKEYS      &kp LBKT       &kp BSPC,
 //                              ╰──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯╰──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯
@@ -69,7 +71,7 @@ ZMK_LAYER(numbers,
 //╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮                              ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
     &kp UNDER      &kp N1         &kp N2         &kp N3         &kp N4         &kp N5                                        &kp N6         &kp N7         &kp N8         &kp N9         &kp N0         TRNS
 //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤                              ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-    TRNS           &kp EXCL       &ruen_one_key  AT          &kp HASH       &kp DLLR       &kp PRCNT                                     &kp CARET      &kp AMPS       &kp STAR       &kp LPAR       &kp RPAR       &kp BSLH
+    TRNS           &kp EXCL       ONEKEY AT      ONEKEY HASH    ONEKEY DLLR    &kp PRCNT                                     ONEKEY CARET   ONEKEY AMPS    &kp STAR       &kp LPAR       &kp RPAR       ONEKEY BSLH
 //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────╮╭──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
     TRNS           &pal           &kp LBRC       &kp RBRC       &kp PIPE       &kp EQUAL      TRNS            TRNS           &kp MINUS      &kp PLUS       &kp LBKT       &kp RBKT       &kp FSLH       &kp DOT
 //╰──────────────┼──────────────┴──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯
@@ -212,7 +214,7 @@ ZMK_LAYER(settings,
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = 
-                <&ruen_switch 0 LS(LC(N1))>,
+                <&ruen_switch 0 LS(LC(N2))>,
                 <&macro_tap &to RUS> 
             ;
         };
@@ -222,7 +224,7 @@ ZMK_LAYER(settings,
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = 
-                <&ruen_switch 1 LS(LC(N2))>,
+                <&ruen_switch 1 LS(LC(N1))>,
                 <&macro_tap &to ENG> 
             ;
         };
