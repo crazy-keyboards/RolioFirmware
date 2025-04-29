@@ -11,6 +11,7 @@
 #include "dt-bindings/zmk/bt.h"
 #include "dt-bindings/zmk/keys.h"
 #include "dt-bindings/zmk/outputs.h"
+#include "behaviors/ruen.dtsi"
 #include "locale/keys_ru_short.h"
 #include "custom-behaviors.dtsi"
 #include "custom-macros.dtsi"
@@ -194,10 +195,40 @@ ZMK_LAYER(settings,
             bindings = <&kp LSHFT>, <&caps_word>;
         };
 
+        ruen_one_key: ruen_one_key {
+            compatible = "zmk,behavior-ruen-one-key";
+            #binding-cells = <2>;
+            to_en = <&ctrl_shift_n1>;
+            to_ru = <&ctrl_shift_n2>;
+        };
+
         HOLD_COMBO_BEHAVIOR(htnumbers_rus, <&m_numbers_rus>) // macro_numbers_rus on hold and kp on tap
     };
 
     macros {
+
+        ctrl_shift_n1: ctrl_shift_n1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;  // небольшая задержка для надёжности
+            tap-ms = <10>;
+            bindings = 
+                <&macro_press &kp LCTRL &kp LSHIFT>, 
+                <&macro_tap &kp N1>, 
+                <&macro_release &kp LCTRL &kp LSHIFT>;
+        };
+
+        ctrl_shift_n2: ctrl_shift_n2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;  // небольшая задержка для надёжности
+            tap-ms = <10>;
+            bindings = 
+                <&macro_press &kp LCTRL &kp LSHIFT>, 
+                <&macro_tap &kp N2>, 
+                <&macro_release &kp LCTRL &kp LSHIFT>;
+        };
+
         unindent: unindent {
             label = "UNINDENT";
             compatible = "zmk,behavior-macro";

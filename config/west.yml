@@ -8,6 +8,8 @@ manifest:
       url-base: https://github.com/joelspadin
     - name: crazy-keyboards
       url-base: https://github.com/crazy-keyboards
+    - name: jewtvet
+      url-base: https://github.com/jewtvet
 
   projects:
     - name: zmk
@@ -26,6 +28,9 @@ manifest:
     - name: zmk-nice-oled
       remote: crazy-keyboards
       revision: main
-
+    - name: zmk-ruen
+      remote: jewtvet
+      revision: main
+      
   self:
     path: config
