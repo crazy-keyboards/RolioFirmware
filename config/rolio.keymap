@@ -20,8 +20,8 @@
 
 #define NONE &none
 #define TRNS &trans
-#define ONEKEY &ruen_one_key
-#define RUENKEY &ruen_key
+#define ONEKEY(key) &ruen_one_key key
+#define RUENKEY(key) &ruen_key key
 
 &sk {
     release-after-ms = <2000>;
@@ -71,7 +71,7 @@ ZMK_LAYER(numbers,
 //╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮                              ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
     &kp UNDER      &kp N1         &kp N2         &kp N3         &kp N4         &kp N5                                        &kp N6         &kp N7         &kp N8         &kp N9         &kp N0         TRNS
 //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤                              ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-    TRNS           &kp EXCL       ONEKEY AT      ONEKEY HASH    ONEKEY DLLR    &kp PRCNT                                     ONEKEY CARET   ONEKEY AMPS    &kp STAR       &kp LPAR       &kp RPAR       ONEKEY BSLH
+    TRNS           &kp EXCL       ONEKEY(AT)     ONEKEY(HASH)   ONEKEY(DLLR)   &kp PRCNT                                     ONEKEY(CARET)  ONEKEY(AMPS)   &kp STAR       &kp LPAR       &kp RPAR       ONEKEY(BSLH)
 //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────╮╭──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
     TRNS           &pal           &kp LBRC       &kp RBRC       &kp PIPE       &kp EQUAL      TRNS            TRNS           &kp MINUS      &kp PLUS       &kp LBKT       &kp RBKT       &kp FSLH       &kp DOT
 //╰──────────────┼──────────────┴──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯
