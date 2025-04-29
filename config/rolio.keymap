@@ -34,7 +34,7 @@ ZMK_LAYER(qwerty,
 //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤                              ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
     &kp TAB        &kp A          &kp S          &kp D          &kp F          &kp G                                         &kp H          &kp J          &kp K          &kp L          &kp SEMI       &kp SQT
 //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────╮╭──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-    &m_tom_eng     &kp Z          &kp X          &kp C          &kp V          &kp B          &kp F16         &kp F17        &kp N          &kp M          &kp COMMA      &kp DOT        &kp FSLH       &m_tom_rus
+    &rulayer     &kp Z          &kp X          &kp C          &kp V          &kp B          &kp F16         &kp F17        &kp N          &kp M          &kp COMMA      &kp DOT        &kp FSLH       &enlayer
 //╰──────────────┼──────────────┴──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯
                                   &mt LGUI DEL   &kp LALT       &kp LCTL       &shft_cpsw     &kp SPACE       &kp RET        &td_mnum       &mo FKEYS      &kp LBKT       &kp BSPC,
 //                              ╰──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯╰──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯
@@ -206,6 +206,26 @@ ZMK_LAYER(settings,
     };
 
     macros {
+
+        rulayer: rulayer {
+            label = "rulayer";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = 
+                &ruen_switch 0 0xE0E11F,
+                <&macro_tap &to RUS> 
+            ;
+        };
+
+        enlayer: enlayer {
+            label = "enlayer";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = 
+                &ruen_switch 1 0xE0E11F,
+                <&macro_tap &to ENG> 
+            ;
+        };
 
         unindent: unindent {
             label = "UNINDENT";
