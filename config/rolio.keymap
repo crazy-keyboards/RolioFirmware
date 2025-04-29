@@ -212,7 +212,7 @@ ZMK_LAYER(settings,
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = 
-                &ruen_switch 0 0xE0E11F,
+                <&ruen_switch 0 0xE0E11F>,
                 <&macro_tap &to RUS> 
             ;
         };
@@ -222,7 +222,7 @@ ZMK_LAYER(settings,
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = 
-                &ruen_switch 1 0xE0E11F,
+                <&ruen_switch 1 0xE0E11F>,
                 <&macro_tap &to ENG> 
             ;
         };
