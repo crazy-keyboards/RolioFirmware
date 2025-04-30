@@ -20,7 +20,7 @@
 
 #define NONE &none
 #define TRNS &trans
-#define RUEN_AT &ruen_key 1 AT
+#define RUEN_AT "&ruen_key 1 AT"
 
 &sk {
     release-after-ms = <2000>;
