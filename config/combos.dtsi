@@ -91,19 +91,19 @@ ZMK_COMBO(cm_lbkt,
 )
 
 ZMK_COMBO(cm_rbkt,
-    &ruen_one_key RBKT,
+    &ruen_one_key 1 RBKT,
     RT2 RM2,
     ENG RUS
 )
 
 ZMK_COMBO(cm_lbrc,
-    &ruen_one_key LBRC,
+    &ruen_one_key 1 LBRC,
     LT3 LM3,
     ENG RUS
 )
 
 ZMK_COMBO(cm_rbrc,
-    &ruen_one_key RBRC,
+    &ruen_one_key 1 RBRC,
     RT3 RM3,
     ENG RUS
 )
