@@ -71,37 +71,37 @@ ZMK_COMBO(sk_shift_left,
     ALL
 )
 
-ZMK_COMBO(cm_lpar),
+ZMK_COMBO(cm_lpar,
     &kp LPAR,
     LT1 LM1,
     ENG RUS
 )
 
-ZMK_COMBO(cm_rpar),
+ZMK_COMBO(cm_rpar,
     &kp RPAR,
     RT1 RM1,
     ENG RUS
 )
 
-ZMK_COMBO(cm_lbkt),
+ZMK_COMBO(cm_lbkt,
     &kp LBKT,
     LT2 LM2,
     ENG RUS
 )
 
-ZMK_COMBO(cm_rbkt),
+ZMK_COMBO(cm_rbkt,
     &kp RBKT,
     RT2 RM2,
     ENG RUS
 )
 
-ZMK_COMBO(cm_lbrc),
+ZMK_COMBO(cm_lbrc,
     &kp LBRC,
     LT3 LM3,
     ENG RUS
 )
 
-ZMK_COMBO(cm_rbrc),
+ZMK_COMBO(cm_rbrc,
     &kp RBRC,
     RT3 RM3,
     ENG RUS
