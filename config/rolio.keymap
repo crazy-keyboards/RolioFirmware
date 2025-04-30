@@ -12,6 +12,7 @@
 #include "dt-bindings/zmk/keys.h"
 #include "dt-bindings/zmk/outputs.h"
 #include "behaviors/ruen.dtsi"
+#include "ruen.h"
 #include "locale/keys_ru_short.h"
 #include "custom-behaviors.dtsi"
 #include "custom-macros.dtsi"
@@ -20,13 +21,6 @@
 
 #define NONE &none
 #define TRNS &trans
-
-#define RUEN_AT &ruen_one_key 1 AT
-#define RUEN_HASH &ruen_one_key 1 HASH 
-#define RUEN_DLLR &ruen_one_key 1 DLLR
-#define RUEN_CARET &ruen_one_key 1 CARET
-#define RUEN_AMPS &ruen_one_key 1 AMPS
-#define RUEN_STAR &ruen_one_key 1 STAR
 
 &sk {
     release-after-ms = <2000>;
