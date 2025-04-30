@@ -198,8 +198,8 @@ ZMK_LAYER(settings,
         ruen_one_key: ruen_one_key {
             compatible = "zmk,behavior-ruen-one-key";
             #binding-cells = <2>;
-            to_en = <0x0507001e>;
-            to_ru = <0x0507001f>;
+            to_en = <0x0307001e>;
+            to_ru = <0x0307001f>;
         };
 
         HOLD_COMBO_BEHAVIOR(htnumbers_rus, <&m_numbers_rus>) // macro_numbers_rus on hold and kp on tap
