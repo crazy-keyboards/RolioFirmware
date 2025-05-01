@@ -7,7 +7,7 @@
      ╰─────────────────────┴─────────────────────╯     */
 
 #include "layers.dtsi"
-#include "behaviors/ruen.dtsi"
+#include "zmk/ruen_win.h"
 
 #define COMBO_TERM_FAST 18
 #define COMBO_TERM_SLOW 30
@@ -85,25 +85,25 @@ ZMK_COMBO(cm_rpar,
 )
 
 ZMK_COMBO(cm_lbkt,
-    &ruen_one_key 1 LBKT,
+    RUEN_LBKT,
     LT2 LM2,
     ENG RUS
 )
 
 ZMK_COMBO(cm_rbkt,
-    &ruen_one_key 1 RBKT,
+    RUEN_RBKT,
     RT2 RM2,
     ENG RUS
 )
 
 ZMK_COMBO(cm_lbrc,
-    &ruen_one_key 1 LBRC,
+    RUEN_LBRC,
     LT3 LM3,
     ENG RUS
 )
 
 ZMK_COMBO(cm_rbrc,
-    &ruen_one_key 1 RBRC,
+    RUEN_RBRC,
     RT3 RM3,
     ENG RUS
 )
