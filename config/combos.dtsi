@@ -72,6 +72,7 @@ ZMK_COMBO(sk_shift_left,
     ALL
 )
 
+// parenthesis combos
 ZMK_COMBO(cm_lpar,
     &kp LPAR,
     LT1 LM1,
