@@ -9,7 +9,7 @@
 #define MACRO(NAME, BINDINGS, WAITMS, TAPMS) \
   macro_##NAME: macro_##NAME { \
       compatible = "zmk,behavior-macro"; \
-      label = str(macro_##NAME); \
+//       label = str(macro_##NAME); \
       #binding-cells = <0>; \
       wait-ms = <WAITMS>; \
       tap-ms = <TAPMS>; \
@@ -24,7 +24,7 @@ MACRO(nav, &macro_tap &kp LC(LS(N2)) &mo LWR &macro_pause_for_release &macro_rel
 #define SWITCH_LANG_AND_MO_LAYER_MACRO(NAME, LAYER, NUM, RETURN_NUM) \
   m_##NAME: macro_##NAME { \
       compatible = "zmk,behavior-macro"; \
-      label = str(macro_##NAME); \
+//       label = str(macro_##NAME); \
       #binding-cells = <0>; \
       wait-ms = <SWITCH_COMBO_WAIT_MS>; \
       tap-ms = <SWITCH_COMBO_TAP_MS>; \
