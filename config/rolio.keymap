@@ -15,7 +15,6 @@
 #include "zmk/ruen_win.h"
 #include "locale/keys_ru_short.h"
 #include "custom-behaviors.dtsi"
-#include "custom-macros.dtsi"
 #include "combos.dtsi"
 #include "layers.dtsi"
 
@@ -209,7 +208,6 @@ ZMK_LAYER(settings,
     macros {
 
         rulang: rulang {
-//             label = "rulang";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = 
@@ -222,7 +220,6 @@ ZMK_LAYER(settings,
         };
 
         enlang: enlang {
-//             label = "enlang";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = 
@@ -235,7 +232,6 @@ ZMK_LAYER(settings,
         };
 
         rulayer: rulayer {
-//             label = "rulayer";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = 
@@ -246,7 +242,6 @@ ZMK_LAYER(settings,
         };
 
         enlayer: enlayer {
-//             label = "enlayer";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = 
@@ -257,7 +252,6 @@ ZMK_LAYER(settings,
         };
 
         unindent: unindent {
-//             label = "UNINDENT";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -270,7 +264,6 @@ ZMK_LAYER(settings,
         };
 
         lstart: lstart {
-//             label = "Line_Start";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -283,7 +276,6 @@ ZMK_LAYER(settings,
         };
 
         lend: lend {
-//             label = "Line_End";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -296,7 +288,6 @@ ZMK_LAYER(settings,
         };
 
         scrsh: scrsh {
-//             label = "Screenshot";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -313,7 +304,6 @@ ZMK_LAYER(settings,
         };
 
         scrcr: scrcr {
-//             label = "Windows_Screen_Crop";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -330,7 +320,6 @@ ZMK_LAYER(settings,
         };
 
         pal: pal {
-//             label = "Pallette";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -345,7 +334,6 @@ ZMK_LAYER(settings,
         // Word seek macros
 
         prev_word: prev_word {
-//             label = "PREV_WORD";
             compatible = "zmk,behavior-macro";
             wait-ms = <2>;
             tap-ms = <20>;
@@ -360,7 +348,6 @@ ZMK_LAYER(settings,
         };
 
         next_word: next_word {
-//             label = "NEXT_WORD";
             compatible = "zmk,behavior-macro";
             wait-ms = <2>;
             tap-ms = <20>;
@@ -375,9 +362,7 @@ ZMK_LAYER(settings,
         };
 
         // Zoom macros
-
         zoom_in: zoom_in {
-//             label = "WINDOWS_ZOOM_IN";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -390,7 +375,6 @@ ZMK_LAYER(settings,
         };
 
         zoom_out: zoom_out {
-//             label = "WINDOWS_ZOOM_OUT";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -403,7 +387,6 @@ ZMK_LAYER(settings,
         };
 
         reset_zoom: reset_zoom {
-//             label = "WINDOWS_RESET_ZOOM";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
