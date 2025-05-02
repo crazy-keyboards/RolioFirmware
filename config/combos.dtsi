@@ -107,3 +107,17 @@ ZMK_COMBO(cm_rbrc,
     RT3 RM3,
     ENG RUS
 )
+
+// enlang combo
+ZMK_COMBO(cm_enlang,
+    &enlang,
+    LM5 LB5,
+    ENG RUS
+)
+
+// rulang combo
+ZMK_COMBO(cm_rulang,
+    &rulang,
+    RM5 RB5,
+    ENG RUS
+)

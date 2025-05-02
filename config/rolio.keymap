@@ -208,6 +208,32 @@ ZMK_LAYER(settings,
 
     macros {
 
+        rulang: rulang {
+            label = "rulang";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = 
+                <&macro_press &kp LCTRL>,
+                <&macro_press &kp LSHIFT>,
+                <&macro_tap &kp N2>,
+                <&macro_release &kp LCTRL>,
+                <&macro_release &kp LSHIFT>
+            ;
+        };
+
+        enlang: enlang {
+            label = "enlang";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = 
+                <&macro_press &kp LCTRL>,
+                <&macro_press &kp LSHIFT>,
+                <&macro_tap &kp N1>,
+                <&macro_release &kp LCTRL>,
+                <&macro_release &kp LSHIFT>
+            ;
+        };
+
         rulayer: rulayer {
             label = "rulayer";
             compatible = "zmk,behavior-macro";
