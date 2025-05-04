@@ -239,6 +239,7 @@ ZMK_LAYER(settings,
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = 
+                <&rulang>,
                 <&ruen_set 0>,
                 <&macro_tap &to RUS> 
             ;
@@ -249,6 +250,7 @@ ZMK_LAYER(settings,
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = 
+                <&enlang>,
                 <&ruen_set 1>,
                 <&macro_tap &to ENG> 
             ;
