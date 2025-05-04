@@ -28,7 +28,7 @@ manifest:
       revision: main
     - name: zmk-ruen
       remote: crazy-keyboards
-      revision: develop
+      revision: v0.1
       
   self:
     path: config
